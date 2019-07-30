@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+body {background-color: lightblue;}
+h1 {color: blue;}
+p {color: red;}
+
+.btn {
+	border: none;
+	background-color: inherit;
+	padding: 14px 28px;
+	font-size: 16px;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.success {
+	color:  green;
+}
+
+.success:hover{
+	background-color: #4CAF50;
+	color: white;
+}
+</style>
+
+<script type="text/javascript">
+	var clientlist;
+	function Save(){
+		var Mylist;
+		var name = document.getElementById("name");
+		var surname = document.getElementById("surname");
+		var age = document.getElementById("age");
+		var email = document.getElementById("email");
+		var password = document.getElementById("password");
+		var conpassword = document.getElementById("confirmed");
+		if(password.value !== conpassword.value){
+			alert("Blyat! The passwords are not the same!");
+		} else if(password.value === conpassword.value){
+			console.log("hello");
+			Mylist.push(name);
+			Mylist.push(surname);
+			Mylist.push(age);
+			Mylist.push(email);
+			Mylist.push(password);
+			Mylist.push(conpassword);
+			clientlist.push(Mylist);
+			alert("Cyka blyat! You are registered!");
+		}else{
+			alert("Nothing is entered! Blyat!");
+		}
+	}
+
+</script>
+
+<body>
+	<form>
+		<div class = "container">
+			<h1>Sign Up</h1>
+			<p>THIS IS A SIGN UP PAGE</p>
+
+			<fieldset>
+				<legend>Information</legend>
+					<label><b>Name</b></label>
+					<input id="name" type="text" placeholder="Enter Name" required>
+
+					<label><b>Surname</b></label>
+					<input id="surname" type="text" placeholder="Enter Surname" required>
+
+					<label><b>Age</b></label>
+					<input id="age" type="number" placeholder="Enter Age" required>
+
+					<label for="email"><b>Email</b></label>
+					<input id="email" type="email" placeholder="Enter Email" name="email" required>
+
+					<label for="psw"><b>Password</b></label>
+					<input id="password" type="password" placeholder="Enter Password" required>
+
+					<label for="confirmpsw"><b>Confirm Password</b></label>
+					<input id="confirmed" type="password">
+			</fieldset>
+		</div>
+		<div>
+			<button class="btn success" onclick="Save()">Click Me</button>
+		</div>
+
+		<p><b>CYKA BLYAT!</b></p>
+	</form>
+</body>
+</html>
